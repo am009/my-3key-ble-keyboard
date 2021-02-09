@@ -1,0 +1,199 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title "4-key"
+Date ""
+Rev ""
+Comp ""
+Comment1 "Author: wjk"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L board-rescue:TTGO_ESP32_TDISPLAY_V1.1-ttgo_esp32 TTGO1
+U 1 1 6012FC04
+P 5100 4050
+F 0 "TTGO1" H 5450 5487 60  0000 C CNN
+F 1 "TTGO_ESP32_TDISPLAY_V1.1" H 5450 5381 60  0000 C CNN
+F 2 "ttgo-tdisplay-kicad-master:TTGO_ESP32_TDisplay_v1.1" H 5100 4050 60  0001 C CNN
+F 3 "" H 5100 4050 60  0001 C CNN
+	1    5100 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3600 4450 3600
+Wire Wire Line
+	3850 3500 4150 3500
+Wire Wire Line
+	6650 3500 6450 3500
+Wire Wire Line
+	6650 3400 6200 3400
+$Comp
+L Device:R R3
+U 1 1 6013DEBA
+P 6200 3150
+F 0 "R3" H 6270 3196 50  0000 L CNN
+F 1 "R" H 6270 3105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6130 3150 50  0001 C CNN
+F 3 "~" H 6200 3150 50  0001 C CNN
+	1    6200 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R4
+U 1 1 6013E817
+P 6450 3150
+F 0 "R4" H 6520 3196 50  0000 L CNN
+F 1 "R" H 6520 3105 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 6380 3150 50  0001 C CNN
+F 3 "~" H 6450 3150 50  0001 C CNN
+	1    6450 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 6013EA7C
+P 4150 3200
+F 0 "R1" H 4220 3246 50  0000 L CNN
+F 1 "R" H 4220 3155 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4080 3200 50  0001 C CNN
+F 3 "~" H 4150 3200 50  0001 C CNN
+	1    4150 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 6013F638
+P 4450 3200
+F 0 "R2" H 4520 3246 50  0000 L CNN
+F 1 "R" H 4520 3155 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal" V 4380 3200 50  0001 C CNN
+F 3 "~" H 4450 3200 50  0001 C CNN
+	1    4450 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 2900 6200 2900
+Wire Wire Line
+	6450 2900 6450 3000
+Wire Wire Line
+	6200 3000 6200 2900
+Connection ~ 6200 2900
+Wire Wire Line
+	6200 2900 6450 2900
+Wire Wire Line
+	6200 3300 6200 3400
+Connection ~ 6200 3400
+Wire Wire Line
+	6200 3400 6000 3400
+Wire Wire Line
+	6450 3300 6450 3500
+Connection ~ 6450 3500
+Wire Wire Line
+	6450 3500 6000 3500
+Wire Wire Line
+	4900 4000 4700 4000
+Wire Wire Line
+	4700 4000 4700 2900
+Wire Wire Line
+	4700 2900 4450 2900
+Wire Wire Line
+	4150 2900 4150 3050
+Wire Wire Line
+	4450 3050 4450 2900
+Connection ~ 4450 2900
+Wire Wire Line
+	4450 2900 4150 2900
+Wire Wire Line
+	4150 3350 4150 3500
+Connection ~ 4150 3500
+Wire Wire Line
+	4150 3500 4900 3500
+Wire Wire Line
+	4450 3350 4450 3600
+Connection ~ 4450 3600
+Wire Wire Line
+	4450 3600 4900 3600
+NoConn ~ 6000 3000
+NoConn ~ 6000 3100
+NoConn ~ 6000 3200
+NoConn ~ 6000 3300
+NoConn ~ 6000 3600
+NoConn ~ 6000 3700
+NoConn ~ 6000 3800
+NoConn ~ 6000 4000
+NoConn ~ 4900 3800
+NoConn ~ 4900 3700
+NoConn ~ 4900 3400
+NoConn ~ 4900 3300
+NoConn ~ 4900 3200
+NoConn ~ 4900 3100
+NoConn ~ 4900 3000
+NoConn ~ 4900 2900
+$Comp
+L board-rescue:KEYSW-keyboard_parts K2
+U 1 1 6014CE31
+P 3550 3600
+F 0 "K2" H 3550 3833 60  0000 C CNN
+F 1 "KEYSW" H 3550 3500 60  0001 C CNN
+F 2 "MX_Alps_Hybrid:MX-1U-NoLED" H 3550 3600 60  0001 C CNN
+F 3 "" H 3550 3600 60  0000 C CNN
+	1    3550 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L board-rescue:KEYSW-keyboard_parts K4
+U 1 1 6014D67F
+P 6950 3500
+F 0 "K4" H 6950 3733 60  0000 C CNN
+F 1 "KEYSW" H 6950 3400 60  0001 C CNN
+F 2 "MX_Alps_Hybrid:MX-1U-NoLED" H 6950 3500 60  0001 C CNN
+F 3 "" H 6950 3500 60  0000 C CNN
+	1    6950 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L board-rescue:KEYSW-keyboard_parts K3
+U 1 1 6014DB80
+P 6950 3050
+F 0 "K3" H 6950 3283 60  0000 C CNN
+F 1 "KEYSW" H 6950 2950 60  0001 C CNN
+F 2 "MX_Alps_Hybrid:MX-1U-NoLED" H 6950 3050 60  0001 C CNN
+F 3 "" H 6950 3050 60  0000 C CNN
+	1    6950 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 3500 3850 3150
+Wire Wire Line
+	3250 3150 3250 3600
+Wire Wire Line
+	3250 3600 3250 3900
+Wire Wire Line
+	3250 3900 4900 3900
+Connection ~ 3250 3600
+Wire Wire Line
+	6000 3900 7250 3900
+Wire Wire Line
+	7250 3900 7250 3500
+Wire Wire Line
+	7250 3500 7250 3050
+Connection ~ 7250 3500
+Wire Wire Line
+	6650 3400 6650 3050
+$Comp
+L board-rescue:KEYSW-keyboard_parts K1
+U 1 1 60146849
+P 3550 3150
+F 0 "K1" H 3550 3383 60  0000 C CNN
+F 1 "KEYSW" H 3550 3050 60  0001 C CNN
+F 2 "MX_Alps_Hybrid:MX-1U-NoLED" H 3550 3150 60  0001 C CNN
+F 3 "" H 3550 3150 60  0000 C CNN
+	1    3550 3150
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

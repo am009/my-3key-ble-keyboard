@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name ttgo_esp32)(type Legacy)(uri ${KIPRJMOD}/ttgo-tdisplay-kicad/ttgo_esp32.lib)(options "")(descr ""))
+  (lib (name keyboard_parts)(type Legacy)(uri ${KIPRJMOD}/kicad_lib_tmk/keyboard_parts.lib)(options "")(descr ""))
+  (lib (name mkl27z256vfm4)(type Legacy)(uri ${KIPRJMOD}/kicad_lib_tmk/mkl27z256vfm4.lib)(options "")(descr ""))
+  (lib (name board-rescue)(type Legacy)(uri ${KIPRJMOD}/board-rescue.lib)(options "")(descr ""))
+)

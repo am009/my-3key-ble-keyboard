@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\warren\Desktop\4-key-bluetooth\kicad\board\board.sch</source>
+    <date>1/28/2021 9:51:38 PM</date>
+    <tool>Eeschema (5.1.9)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>4-key</title>
+        <company/>
+        <rev/>
+        <date/>
+        <source>board.sch</source>
+        <comment number="1" value="Author: wjk"/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="TTGO1">
+      <value>TTGO_ESP32_TDISPLAY_V1.1</value>
+      <footprint>ttgo-tdisplay-kicad-master:TTGO_ESP32_TDisplay_v1.1</footprint>
+      <libsource lib="ttgo_esp32" part="TTGO_ESP32_TDISPLAY_V1.1" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6012FC04</tstamp>
+    </comp>
+    <comp ref="R3">
+      <value>R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6013DEBA</tstamp>
+    </comp>
+    <comp ref="R4">
+      <value>R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6013E817</tstamp>
+    </comp>
+    <comp ref="R1">
+      <value>R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6013EA7C</tstamp>
+    </comp>
+    <comp ref="R2">
+      <value>R</value>
+      <footprint>Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Device" part="R" description="Resistor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6013F638</tstamp>
+    </comp>
+    <comp ref="K2">
+      <value>KEYSW</value>
+      <footprint>MX_Alps_Hybrid:MX-1U-NoLED</footprint>
+      <libsource lib="keyboard_parts" part="KEYSW" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6014CE31</tstamp>
+    </comp>
+    <comp ref="K4">
+      <value>KEYSW</value>
+      <footprint>MX_Alps_Hybrid:MX-1U-NoLED</footprint>
+      <libsource lib="keyboard_parts" part="KEYSW" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6014D67F</tstamp>
+    </comp>
+    <comp ref="K3">
+      <value>KEYSW</value>
+      <footprint>MX_Alps_Hybrid:MX-1U-NoLED</footprint>
+      <libsource lib="keyboard_parts" part="KEYSW" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6014DB80</tstamp>
+    </comp>
+    <comp ref="K1">
+      <value>KEYSW</value>
+      <footprint>MX_Alps_Hybrid:MX-1U-NoLED</footprint>
+      <libsource lib="keyboard_parts" part="KEYSW" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>60146849</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Device" part="R">
+      <description>Resistor</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>R_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">R</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="keyboard_parts" part="KEYSW">
+      <fields>
+        <field name="Reference">K?</field>
+        <field name="Value">KEYSW</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="ttgo_esp32" part="TTGO_ESP32_TDISPLAY_V1.1">
+      <fields>
+        <field name="Reference">TTGO</field>
+        <field name="Value">TTGO_ESP32_TDISPLAY_V1.1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="5V" type="unspc"/>
+        <pin num="2" name="GND" type="unspc"/>
+        <pin num="3" name="GPIO27" type="unspc"/>
+        <pin num="4" name="GPIO26" type="unspc"/>
+        <pin num="5" name="GPIO25" type="unspc"/>
+        <pin num="6" name="GPIO33" type="unspc"/>
+        <pin num="7" name="GPIO32" type="unspc"/>
+        <pin num="8" name="SVN" type="unspc"/>
+        <pin num="9" name="GPIO38" type="unspc"/>
+        <pin num="10" name="GPIO37" type="unspc"/>
+        <pin num="11" name="SVP" type="unspc"/>
+        <pin num="12" name="3.3V" type="unspc"/>
+        <pin num="13" name="GND" type="unspc"/>
+        <pin num="14" name="GND" type="unspc"/>
+        <pin num="15" name="GPIO21" type="unspc"/>
+        <pin num="16" name="GPIO22" type="unspc"/>
+        <pin num="17" name="GPIO17" type="unspc"/>
+        <pin num="18" name="GPIO2" type="unspc"/>
+        <pin num="19" name="GPIO15" type="unspc"/>
+        <pin num="20" name="GPIO13" type="unspc"/>
+        <pin num="21" name="GPIO12" type="unspc"/>
+        <pin num="22" name="GND" type="unspc"/>
+        <pin num="23" name="GND" type="unspc"/>
+        <pin num="24" name="3.3V" type="unspc"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="keyboard_parts">
+      <uri>C:\Users\warren\Desktop\4-key-bluetooth\kicad\kicad_lib_tmk-master\keyboard_parts.lib</uri>
+    </library>
+    <library logical="ttgo_esp32">
+      <uri>C:\Users\warren\Desktop\4-key-bluetooth\ttgo-tdisplay-kicad-master\ttgo_esp32.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(TTGO1-Pad18)">
+      <node ref="TTGO1" pin="18"/>
+    </net>
+    <net code="2" name="Net-(TTGO1-Pad21)">
+      <node ref="TTGO1" pin="21"/>
+    </net>
+    <net code="3" name="Net-(TTGO1-Pad22)">
+      <node ref="TTGO1" pin="22"/>
+    </net>
+    <net code="4" name="Net-(TTGO1-Pad1)">
+      <node ref="TTGO1" pin="1"/>
+    </net>
+    <net code="5" name="Net-(TTGO1-Pad3)">
+      <node ref="TTGO1" pin="3"/>
+    </net>
+    <net code="6" name="Net-(TTGO1-Pad4)">
+      <node ref="TTGO1" pin="4"/>
+    </net>
+    <net code="7" name="Net-(TTGO1-Pad5)">
+      <node ref="TTGO1" pin="5"/>
+    </net>
+    <net code="8" name="Net-(TTGO1-Pad8)">
+      <node ref="TTGO1" pin="8"/>
+    </net>
+    <net code="9" name="Net-(TTGO1-Pad9)">
+      <node ref="TTGO1" pin="9"/>
+    </net>
+    <net code="10" name="Net-(TTGO1-Pad10)">
+      <node ref="TTGO1" pin="10"/>
+    </net>
+    <net code="11" name="Net-(TTGO1-Pad11)">
+      <node ref="TTGO1" pin="11"/>
+    </net>
+    <net code="12" name="Net-(TTGO1-Pad17)">
+      <node ref="TTGO1" pin="17"/>
+    </net>
+    <net code="13" name="Net-(R1-Pad1)">
+      <node ref="TTGO1" pin="24"/>
+      <node ref="R2" pin="1"/>
+      <node ref="R1" pin="1"/>
+    </net>
+    <net code="14" name="Net-(K1-Pad1)">
+      <node ref="TTGO1" pin="19"/>
+      <node ref="R1" pin="2"/>
+      <node ref="K1" pin="1"/>
+    </net>
+    <net code="15" name="Net-(K3-Pad1)">
+      <node ref="K3" pin="1"/>
+      <node ref="TTGO1" pin="2"/>
+      <node ref="K4" pin="1"/>
+    </net>
+    <net code="16" name="Net-(K1-Pad2)">
+      <node ref="K1" pin="2"/>
+      <node ref="K2" pin="2"/>
+      <node ref="TTGO1" pin="23"/>
+    </net>
+    <net code="17" name="Net-(K2-Pad1)">
+      <node ref="R2" pin="2"/>
+      <node ref="K2" pin="1"/>
+      <node ref="TTGO1" pin="20"/>
+    </net>
+    <net code="18" name="Net-(TTGO1-Pad13)">
+      <node ref="TTGO1" pin="13"/>
+    </net>
+    <net code="19" name="Net-(TTGO1-Pad14)">
+      <node ref="TTGO1" pin="14"/>
+    </net>
+    <net code="20" name="Net-(TTGO1-Pad15)">
+      <node ref="TTGO1" pin="15"/>
+    </net>
+    <net code="21" name="Net-(TTGO1-Pad16)">
+      <node ref="TTGO1" pin="16"/>
+    </net>
+    <net code="22" name="Net-(K3-Pad2)">
+      <node ref="K3" pin="2"/>
+      <node ref="R3" pin="2"/>
+      <node ref="TTGO1" pin="7"/>
+    </net>
+    <net code="23" name="Net-(K4-Pad2)">
+      <node ref="TTGO1" pin="6"/>
+      <node ref="R4" pin="2"/>
+      <node ref="K4" pin="2"/>
+    </net>
+    <net code="24" name="Net-(R3-Pad1)">
+      <node ref="TTGO1" pin="12"/>
+      <node ref="R4" pin="1"/>
+      <node ref="R3" pin="1"/>
+    </net>
+  </nets>
+</export>

@@ -1,0 +1,10 @@
+Reference, Value, Footprint, Datasheet
+"TTGO1","TTGO_ESP32_TDISPLAY_V1.1","ttgo-tdisplay-kicad-master:TTGO_ESP32_TDisplay_v1.1",""
+"R3","R","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~"
+"R4","R","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~"
+"R1","R","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~"
+"R2","R","Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P10.16mm_Horizontal","~"
+"K2","KEYSW","MX_Alps_Hybrid:MX-1U-NoLED",""
+"K4","KEYSW","MX_Alps_Hybrid:MX-1U-NoLED",""
+"K3","KEYSW","MX_Alps_Hybrid:MX-1U-NoLED",""
+"K1","KEYSW","MX_Alps_Hybrid:MX-1U-NoLED",""
