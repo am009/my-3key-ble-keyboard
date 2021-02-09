@@ -60,5 +60,8 @@ PCB设计使用Kicad. 用了下面的组件
 
 ## 图片展示
 
-
-
+![](https://github.com/am009/my-3key-ble-keyboard/raw/main/photos/1.jpg)
+![](https://github.com/am009/my-3key-ble-keyboard/raw/main/photos/4.jpg)
+![](https://github.com/am009/my-3key-ble-keyboard/raw/main/photos/bat.jpg)
+![](https://github.com/am009/my-3key-ble-keyboard/raw/main/photos/pcb1.jpg)
+![](https://github.com/am009/my-3key-ble-keyboard/raw/main/photos/pcb2.jpg)
