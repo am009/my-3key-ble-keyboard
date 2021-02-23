@@ -6,6 +6,12 @@ Based on a tiny esp32 board TTGO T-Display. Draw a simple extension PCB with key
 
 本项目的目的是学习使用Kicad，尝试画PCB，同时满足自己对小巧的蓝牙键盘的需求。没想到PCB双层板打样这么便宜，5块钱5张，那还用什么洞洞板，飞什么线，自己画拓展板去。这次拓展接线完全就是简单的IO口接轴接GND，甚至用esp32的内部上拉，走线甚至只用了单面。本来想尝试尝试esp_idf开发的，最后还是选择了Arduino IDE。。。比较简单。
 
+## Reason
+背anki用。三个键分别是Enter（good 绿色按钮）数字键1 (again 红色) 数字键2 (hard 灰色)
+Make a small ble keyboard for Anki flashcards.
+I mount my phone over my pillow, thinking about some way to control my phone. I tried using my Logitech bluethooth keyboard and feel great. When using Ankidroid to remember vocabularies, I found myself needing a tiny bluetooth keyboard.
+the three key is set to Enter(for pressing the green(good) button), num 1(for red(again) button), and num 2(for gray(hard) button).
+
 ## Hardware
 
 物料：
