@@ -144,6 +144,7 @@ void loop()
     //   rtc_gpio_pullup_en((gpio_num_t)(pins[i]));
     // }
     Serial.println("Entering deep sleep...");
+    bleKeyboard.end();
     vTaskDelay(200 / portTICK_PERIOD_MS);
     esp_deep_sleep_start(); // not return
   }
