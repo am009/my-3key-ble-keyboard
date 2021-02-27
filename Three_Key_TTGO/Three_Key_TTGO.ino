@@ -109,6 +109,9 @@ void setup()
 
   Serial.printf("Interrupt setup finished at %d ms.\n", millis());
 
+  // Wait for stable voltage.
+  vTaskDelay(100 / portTICK_PERIOD_MS);
+
   battery_adc_init();
   battery_voltage = battery_get_voltage();
   percentage = battery_percentage(battery_voltage);
@@ -153,13 +156,30 @@ void loop()
     last_update = current;
     // 更新电池电量
     battery_voltage = battery_get_voltage();
-    percentage = battery_percentage(battery_voltage);
-    bleKeyboard.setBatteryLevel(roundf(percentage));
+    float temp_percent = battery_percentage(battery_voltage);
+    if (temp_percent != 0.0f)
+    {
+      percentage = temp_percent;
+      bleKeyboard.setBatteryLevel(roundf(percentage));
+    }
+    else
+    {
+      Serial.printf("Anomalous battery voltage auto-update: %f v. %f%%\n", battery_voltage, percentage);
+    }
   }
   if (butl_pressed)
   {
     battery_voltage = battery_get_voltage();
-    percentage = battery_percentage(battery_voltage);
+    float temp_percent = battery_percentage(battery_voltage);
+    if (temp_percent != 0.0f)
+    {
+      percentage = temp_percent;
+      bleKeyboard.setBatteryLevel(roundf(percentage));
+    }
+    else
+    {
+      Serial.printf("Anomalous battery voltage but-press: %f v. %f%%\n", battery_voltage, percentage);
+    }
     tft.init();
     tft.setRotation(1); //横
     String voltage = String(battery_voltage) + "V";
