@@ -109,15 +109,6 @@ void setup()
 
   Serial.printf("Interrupt setup finished at %d ms.\n", millis());
 
-  // Wait for stable voltage.
-  vTaskDelay(100 / portTICK_PERIOD_MS);
-
-  battery_adc_init();
-  battery_voltage = battery_get_voltage();
-  percentage = battery_percentage(battery_voltage);
-  Serial.printf("Battery voltage is %f v. %f%%\n", battery_voltage, percentage);
-  bleKeyboard.setBatteryLevel(roundf(percentage));
-
   bleKeyboard.begin();
   key_queue = xQueueCreate(10, sizeof(uint8_t));
   if (key_queue == NULL)
@@ -128,6 +119,15 @@ void setup()
   {
     Serial.printf("ble_send_task create failed!\n");
   }
+
+  // Wait for stable voltage.
+  vTaskDelay(100 / portTICK_PERIOD_MS);
+  battery_adc_init();
+  battery_voltage = battery_get_voltage();
+  percentage = battery_percentage(battery_voltage);
+  Serial.printf("Battery voltage is %f v. %f%%\n", battery_voltage, percentage);
+  bleKeyboard.setBatteryLevel(roundf(percentage));
+  
   Serial.println("BLE started.\n");
 }
 

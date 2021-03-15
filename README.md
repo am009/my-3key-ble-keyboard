@@ -62,6 +62,9 @@ PCB设计使用Kicad. 用了下面的组件
 
 1. [Arduino 蓝牙键盘库](https://github.com/T-vK/ESP32-BLE-Keyboard) 
 2. [TTGO的屏幕支持库](https://github.com/Xinyuan-LilyGO/TTGO-T-Display) 
+3. 按照`Three_Key_TTGO\BleKeyboard.cpp.patch`和`Three_Key_TTGO\BleKeyboard.h.patch`修改ESP32-BLE-Keyboard库(为了支持即时断开连接)
+
+开发板选择 ESP32 Dev Module,在PSRAM选项中选择Disable， Flash Size 选项中选择4MB ，其它保持默认
 
 
 
