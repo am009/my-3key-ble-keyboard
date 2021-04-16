@@ -80,6 +80,8 @@ void IRAM_ATTR butl_isr(void *arg)
 
 void setup()
 {
+  butl_pressed = false;
+  butr_pressed = false;
   Serial.begin(115200);
   print_wakeup_reason();
 
@@ -140,12 +142,31 @@ void loop()
   uint32_t current = millis();
   if (current - last_use > SLEEP_DELAY_MS || butr_pressed)
   {
-    esp_sleep_enable_ext1_wakeup(GPIO_SEL_35, ESP_EXT1_WAKEUP_ALL_LOW);
-    // esp_sleep_pd_config(ESP_PD_DOMAIN_RTC_PERIPH, ESP_PD_OPTION_ON);
-    // for (uint32_t i = 0; i < NUM_KEYS; i++)
-    // {
-    //   rtc_gpio_pullup_en((gpio_num_t)(pins[i]));
-    // }
+    esp_err_t sleep_res;
+    #if 1
+    sleep_res = esp_sleep_enable_ext1_wakeup(GPIO_SEL_35, ESP_EXT1_WAKEUP_ALL_LOW);
+    if (sleep_res != ESP_OK) {
+      Serial.println("[Error] esp_sleep_enable_ext1_wakeup Error!");
+    }
+    // 完全不需要 rtc_gpio_pullup_en(GPIO_NUM_35); ，因为自带上拉电阻。
+    #else
+    // 使用三个键同时按下作为唤醒方式。
+    sleep_res = esp_sleep_enable_ext1_wakeup(GPIO_SEL_13 | GPIO_SEL_32 | GPIO_SEL_33, ESP_EXT1_WAKEUP_ALL_LOW);
+    if (sleep_res != ESP_OK) {
+      Serial.println("[Error] esp_sleep_enable_ext1_wakeup Error!");
+    }
+    sleep_res = esp_sleep_pd_config(ESP_PD_DOMAIN_RTC_PERIPH, ESP_PD_OPTION_ON);
+    if (sleep_res != ESP_OK) {
+      Serial.println("[Error] esp_sleep_pd_config Error!");
+    }
+    for (uint32_t i = 0; i < NUM_KEYS; i++)
+    {
+      sleep_res = rtc_gpio_pullup_en((gpio_num_t)(pins[i]));
+      if (sleep_res != ESP_OK) {
+        Serial.println("[Error] rtc_gpio_pullup_en Error!");
+      }
+    }
+    #endif
     Serial.println("Entering deep sleep...");
     bleKeyboard.end();
     vTaskDelay(200 / portTICK_PERIOD_MS);

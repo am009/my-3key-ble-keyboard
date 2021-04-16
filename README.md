@@ -6,10 +6,11 @@ Based on a tiny esp32 board TTGO T-Display. Draw a simple extension PCB with key
 
 本项目的目的是学习使用Kicad，尝试画PCB，同时满足自己对小巧的蓝牙键盘的需求。没想到PCB双层板打样这么便宜，5块钱5张，那还用什么洞洞板，飞什么线，自己画拓展板去。这次拓展接线完全就是简单的IO口接轴接GND，甚至用esp32的内部上拉，走线甚至只用了单面。本来想尝试尝试esp_idf开发的，最后还是选择了Arduino IDE。。。比较简单。
 
+
 Update:
  
 - 休眠前主动断开连接，不必等到超时才断开 - ok
-- 电量显示有时不稳定，会显示电量为0% - to check
+- 电量显示有时不稳定，会显示电量为0% - ok
 - 低电量闪烁提醒。- 没有合适的板载led
 
 
