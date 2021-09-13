@@ -24,7 +24,7 @@ the three key is set to Enter(for pressing the green(good) button), num 1(for re
 
 物料：
 
-1. 电池最后选了802040（8mm厚，20mmx40mm） 800mah，勉强塞下。续航能力7-10天。是1.25mm 2P 正向接口。 15元两个包邮
+1. 电池最后选了~~802040（8mm厚，20mmx40mm） 800mah，勉强塞下~~(update 2021.9.13 前两天电池被键轴焊脚戳破了，改用602040锂电池)。续航能力7-10天。是1.25mm 2P 正向接口。 15元两个包邮
 2. 买了4个cherry 茶轴和4个灰色键帽。 带邮费26。
 3. TTGO T-Display 47元（带排针），加两个12P排母。
 4. 自备烙铁焊锡丝。
