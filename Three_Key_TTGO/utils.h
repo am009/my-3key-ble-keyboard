@@ -1,4 +1,5 @@
 #include "esp_adc_cal.h"
+#include "soc/adc_channel.h"
 
 void print_wakeup_reason();
 void battery_adc_init();

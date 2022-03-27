@@ -21,7 +21,7 @@ extern Button buts[NUM_KEYS]; // k2 k4 k3
 #define BUTL_PIN 0
 
 extern uint32_t pins[NUM_KEYS];
-extern char *keynames[NUM_KEYS];
+extern const char *keynames[NUM_KEYS];
 
 extern TimerHandle_t timers[NUM_KEYS];
 

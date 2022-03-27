@@ -5,7 +5,7 @@
 // Button buts[NUM_KEYS] = {{0, false, &on_key_int}, {0, false, &on_key_int}, {0, false, &on_key_int}}; // k2 k4 k3
 Button buts[NUM_KEYS] = {0};
 uint32_t pins[NUM_KEYS] = {13, 33, 32};
-char *keynames[NUM_KEYS] = {"K2", "K4", "K3"};
+const char *keynames[NUM_KEYS] = {"K2", "K4", "K3"};
 uint32_t error_code = 0;
 TimerHandle_t timers[NUM_KEYS];
 
@@ -13,7 +13,7 @@ void IRAM_ATTR key_isr(void *arg)
 {
   Button *s = static_cast<Button *>(arg);
   uint32_t ind = (s - buts);
-  if (xTimerResetFromISR(timers[ind], pdFALSE) != pdPASS)
+  if (xTimerResetFromISR(timers[ind], NULL) != pdPASS)
   {
     error_code = 1;
   }

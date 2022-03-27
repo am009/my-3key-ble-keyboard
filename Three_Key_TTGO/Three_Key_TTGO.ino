@@ -43,7 +43,7 @@ void ble_send_task(void *p)
 // ("TTGO 3-Key Mechanical Keyboard", "warrenwjk", 100)
 BleKeyboard bleKeyboard("TTGO 3-Key Mechanical Keyboard", "warrenwjk", 76);
 TFT_eSPI tft = TFT_eSPI(135, 240); // Invoke custom library
-static uint8_t ble2key[NUM_KEYS] = {KEY_RETURN, '2', '1'};
+static uint8_t ble2key[NUM_KEYS] = {KEY_RETURN, '1', '1'}; // 在这里修改按键值
 void on_key_int(uint32_t p)
 {
   bool current_state = (((uint32_t)p % 2 == 1) ? true : false);
